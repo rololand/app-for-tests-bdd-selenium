@@ -15,21 +15,21 @@ public class toDoListSteps {
     WebDriver driver;
     ToDoListPage toDoListPage;
 
-//    @Before
-//    public void setup() {
-//        driver = new ChromeDriver();
-//        String url = "https://rololand.github.io/app-for-tests/";
-//
-//        toDoListPage = new ToDoListPage(driver, url);
-//        toDoListPage.go();
-//    }
-//
-//    @After
-//    public void tearDown() {
-//        driver.manage().deleteAllCookies();
-//        driver.quit();
-//        driver = null;
-//    }
+    @Before
+    public void setup() {
+        driver = new ChromeDriver();
+        String url = "https://rololand.github.io/app-for-tests/";
+
+        toDoListPage = new ToDoListPage(driver, url);
+        toDoListPage.go();
+    }
+
+    @After
+    public void tearDown() {
+        driver.manage().deleteAllCookies();
+        driver.quit();
+        driver = null;
+    }
 
     @Given("I am on to do list page")
     public void iAmOnToDoListPage() {
